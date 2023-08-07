@@ -228,17 +228,6 @@ function email-self() {
     python emailer/src/main.py -r zackbotkin@gmail.com -t "$1"
 }
 
-## https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&preserve-view=true&pivots=cs1-bash
-function sql-server() {
-    winpty docker exec -it sql1 "bash"
-    # /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Ready4go!"
-}
-
-## https://medium.com/swlh/how-to-connect-to-mysql-docker-from-python-application-on-macos-mojave-32c7834e5afa 
-function mysql-server() {
-    winpty docker exec -it user_mysql_1 mysql -uroot -proot_password
-}
-
 function todays-lyrics() {
     cd "$NOTES_DIR/lyrics"
     TODAY=`date +%F`
