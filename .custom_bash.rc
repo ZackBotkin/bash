@@ -1,0 +1,324 @@
+
+CONFIGS_DIR="$HOME/configs"
+
+CMD_LINE_APP_DIR="$HOME/cmd-line-apps"
+
+COFFEE_TRACKER_DIR="$CMD_LINE_APP_DIR/coffee-tracker"
+EMAILER_DIR="$CMD_LINE_APP_DIR/emailer"
+FOOD_DIARY_DIR="$CMD_LINE_APP_DIR/food-diary"
+GOAL_TRACKER_DIR="$CMD_LINE_APP_DIR/goal-tracker"
+INTERACTIVE_MENU_DIR="$CMD_LINE_APP_DIR/interactive-menu"
+MEMORY_BANK_DIR="$CMD_LINE_APP_DIR/memory-bank"
+RUNNER_READER_DIR="$CMD_LINE_APP_DIR/runner-reader"
+WATER_TRACKER_DIR="$CMD_LINE_APP_DIR/water-tracker"
+WORKOUT_BUDDY_DIR="$CMD_LINE_APP_DIR/workout-buddy"
+
+WIP_COFFEE_TRACKER_DIR="$PROJECTS_DIR/coffee-tracker"
+WIP_EMAILER_DIR="$PROJECTS_DIR/emailer"
+WIP_FOOD_DIARY_DIR="$PROJECTS_DIR/food-diary"
+WIP_GOAL_TRACKER_DIR="$PROJECTS_DIR/goal-tracker"
+WIP_INTERACTIVE_MENU_DIR="$PROJECTS_DIR/interactive-menu"
+WIP_MEMORY_BANK_DIR="$PROJECTS_DIR/memory-bank"
+WIP_RUNNER_READER_DIR="$PROJECTS_DIR/runner-reader"
+WIP_WATER_TRACKER_DIR="$PROJECTS_DIR/water-tracker"
+WIP_WORKOUT_BUDDY_DIR="$PROJECTS_DIR/workout-buddy"
+
+#
+#   personal projects
+#
+
+##### Runner reader #####
+function runner-reader() {
+    cd "$RUNNER_READER_DIR"
+    PYTHONPATH=".:$EMAILER_DIR:$INTERACTIVE_MENU_DIR" python runner/src/main.py --interactive \
+    --config_file "C:\\Users\\zackb\\configs\\runner-reader.json"
+}
+function wip-runner-reader() {
+    cd "$WIP_RUNNER_READER_DIR"
+    PYTHONPATH=".:$WIP_EMAILER_DIR:$WIP_INTERACTIVE_MENU_DIR" python runner/src/main.py --interactive \
+    --config_file "C:\\Users\\zackb\\configs\\runner-reader.json"
+}
+function test-runner-reader() {
+    cd "$RUNNER_READER_DIR"
+    PYTHONPATH=".:$EMAILER_DIR:$INTERACTIVE_MENU_DIR" python runner/src/main.py --interactive \
+    --config_file "C:\\Users\\zackb\\configs\\tst-runner-reader.json"
+}
+function wip-test-runner-reader() {
+    cd "$WIP_RUNNER_READER_DIR"
+    PYTHONPATH=".:$WIP_EMAILER_DIR:$WIP_INTERACTIVE_MENU_DIR" python runner/src/main.py --interactive \
+    --config_file "C:\\Users\\zackb\\configs\\tst-runner-reader.json"
+}
+
+##### Workout buddy #####
+function workout-buddy() {
+    cd "$WORKOUT_BUDDY_DIR"
+    PYTHONPATH=".:$INTERACTIVE_MENU_DIR" python buddy/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\workout-buddy.json"
+}
+function wip-workout-buddy() {
+    cd "$WIP_WORKOUT_BUDDY_DIR"
+    PYTHONPATH=".:$WIP_INTERACTIVE_MENU_DIR" python buddy/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\workout-buddy.json"
+}
+
+function test-workout-buddy() {
+    cd "$WORKOUT_BUDDY_DIR"
+    PYTHONPATH=".:$INTERACTIVE_MENU_DIR" python buddy/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\tst-workout-buddy.json"
+}
+function wip-test-workout-buddy() {
+    cd "$WIP_WORKOUT_BUDDY_DIR"
+    PYTHONPATH=".:$WIP_INTERACTIVE_MENU_DIR" python buddy/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\tst-workout-buddy.json"
+}
+
+##### Memory bank #####
+function memory-bank() {
+    cd "$MEMORY_BANK_DIR"
+    PYTHONPATH=".:$EMAILER_DIR:$INTERACTIVE_MENU_DIR" python memory_bank/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\memory-bank.json"
+}
+function wip-memory-bank() {
+    cd "$WIP_MEMORY_BANK_DIR"
+    PYTHONPATH=".:$WIP_EMAILER_DIR:$WIP_INTERACTIVE_MENU_DIR" python memory_bank/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\memory-bank.json"
+}
+
+##### Food diary #####
+function food-diary() {
+    cd "$FOOD_DIARY_DIR"
+    PYTHONPATH=".:$EMAILER_DIR:$INTERACTIVE_MENU_DIR" python food_diary/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\food-diary.json"
+}
+function wip-food-diary() {
+    cd "$WIP_FOOD_DIARY_DIR"
+    PYTHONPATH=".:$WIP_EMAILER_DIR:$WIP_INTERACTIVE_MENU_DIR" python food_diary/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\food-diary.json"
+}
+
+##### Coffee tracker #####
+function coffee-tracker() {
+    cd "$COFFEE_TRACKER_DIR"
+    PYTHONPATH=".:$EMAILER_DIR:$INTERACTIVE_MENU_DIR" python coffee_tracker/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\coffee-tracker.json"
+}
+function wip-coffee-tracker() {
+    cd "$WIP_COFFEE_TRACKER_DIR"
+    PYTHONPATH=".:$WIP_EMAILER_DIR:$WIP_INTERACTIVE_MENU_DIR" python coffee_tracker/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\coffee-tracker.json"
+}
+
+##### water-tracker #####
+function water-tracker() {
+    cd "$WATER_TRACKER_DIR"
+    PYTHONPATH=".:$EMAILER_DIR:$INTERACTIVE_MENU_DIR" python water_tracker/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\water-tracker.json"
+}
+function wip-water-tracker() {
+    cd "$WIP_WATER_TRACKER_DIR"
+    PYTHONPATH=".:$WIP_EMAILER_DIR:$WIP_INTERACTIVE_MENU_DIR" python water_tracker/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\water-tracker.json"
+}
+
+##### goal-tracker #####
+function goal-tracker() {
+    cd "$GOAL_TRACKER_DIR"
+    PYTHONPATH=".:$EMAILER_DIR:$INTERACTIVE_MENU_DIR" python goal_tracker/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\goal-tracker.json"
+}
+function wip-goal-tracker() {
+    cd "$WIP_GOAL_TRACKER_DIR"
+    PYTHONPATH=".:$WIP_EMAILER_DIR:$WIP_INTERACTIVE_MENU_DIR" python goal_tracker/src/main.py \
+    --config_file "C:\\Users\\zackb\\configs\\goal-tracker.json"
+}
+
+function new-project() {
+    if [[ -z "$1" ]]; then
+        echo "Need a project name"
+    else
+        cp -r "$PROJECTS_DIR/skeleton-project" "$PROJECTS_DIR/$1"
+        cp -r "$PROJECTS_DIR/skeleton-project/tmp.json" "$CONFIGS_DIR/$1.json"
+        cd "$PROJECTS_DIR/$1"
+        echo "Project created! Remember to replace \"tmp\" as the top level module name!"
+        echo "Probably also a good idea to change the name of the database, as that is also \"tmp\""
+    fi
+}
+
+function sync-coffee-tracker() {
+    echo ">>> Syncing coffee-tracker"
+    rm -rf "$COFFEE_TRACKER_DIR"
+    cp -r "$WIP_COFFEE_TRACKER_DIR" "$COFFEE_TRACKER_DIR"
+    echo "Done syncing coffee-tracker <<<"
+}
+function sync-emailer() {
+    echo ">>> Syncing emailer"
+    rm -rf "$EMAILER_DIR"
+    cp -r "$WIP_EMAILER_DIR" "$EMAILER_DIR"
+    echo "Done syncing emailer <<<"
+}
+function sync-food-diary() {
+    echo ">>> Syncing food-diary"
+    rm -rf "$FOOD_DIARY_DIR"
+    cp -r "$WIP_FOOD_DIARY_DIR" "$FOOD_DIARY_DIR"
+    echo "Done syncing food-diary <<<"
+}
+function sync-goal-tracker() {
+    echo ">>> Syncing goal-tracker"
+    rm -rf "$GOAL_TRACKER_DIR"
+    cp -r "$WIP_GOAL_TRACKER_DIR" "$GOAL_TRACKER_DIR"
+    echo "Done syncing goal-tracker <<<"
+}
+function sync-interactive-menu() {
+    echo ">>> Syncing interactive-menu"
+    rm -rf "$INTERACTIVE_MENU_DIR"
+    cp -r "$WIP_INTERACTIVE_MENU_DIR" "$INTERACTIVE_MENU_DIR"
+    echo "Done syncing interactive-menu <<<"
+}
+function sync-memory-bank() {
+    echo ">>> Syncing memory-bank"
+    rm -rf "$MEMORY_BANK_DIR"
+    cp -r "$WIP_MEMORY_BANK_DIR" "$MEMORY_BANK_DIR"
+    echo "Done syncing memory-bank <<<"
+}
+function sync-runner-reader() {
+    echo ">>> Syncing runner-reader"
+    rm -rf "$RUNNER_READER_DIR"
+    cp -r "$WIP_RUNNER_READER_DIR" "$RUNNER_READER_DIR"
+    echo "Done syncing runner-reader <<<"
+}
+function sync-water-tracker() {
+    echo ">>> Syncing water-tracker"
+    rm -rf "$WATER_TRACKER_DIR"
+    cp -r "$WIP_WATER_TRACKER_DIR" "$WATER_TRACKER_DIR"
+    echo "Done syncing water-tracker <<<"
+}
+function sync-workout-buddy() {
+    echo ">>> Syncing workout-buddy"
+    rm -rf "$WORKOUT_BUDDY_DIR"
+    cp -r "$WIP_WORKOUT_BUDDY_DIR" "$WORKOUT_BUDDY_DIR"
+    echo "Done syncing workout-buddy <<<"
+}
+
+
+function sync-all-projects() {
+    sync-coffee-tracker
+    sync-emailer
+    sync-food-diary
+    sync-goal-tracker
+    sync-interactive-menu
+    sync-memory-bank
+    sync-runner-reader
+    sync-water-tracker
+    sync-workout-buddy
+}
+
+#
+#   other
+#
+function virtualenv() {
+    if [[ -z "$1" ]]; then
+        source "$VIRTUAL_ENVS_DIR/running-cmd-line/Scripts/activate"
+    else
+        source "$VIRTUAL_ENVS_DIR/$1/Scripts/activate"
+    fi
+}
+
+function email-self() {
+    cd $EMAIL_PROJECT_DIR
+    python emailer/src/main.py -r zackbotkin@gmail.com -t "$1"
+}
+
+## https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&preserve-view=true&pivots=cs1-bash
+function sql-server() {
+    winpty docker exec -it sql1 "bash"
+    # /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Ready4go!"
+}
+
+## https://medium.com/swlh/how-to-connect-to-mysql-docker-from-python-application-on-macos-mojave-32c7834e5afa 
+function mysql-server() {
+    winpty docker exec -it user_mysql_1 mysql -uroot -proot_password
+}
+
+function todays-lyrics() {
+    cd "$NOTES_DIR/lyrics"
+    TODAY=`date +%F`
+    FILENAME="$TODAY.txt"
+    vim $FILENAME
+}
+
+function yesterdays-lyrics() {
+    cd "$NOTES_DIR/lyrics"
+    TODAY=`date -d "yesterday" +%F`
+    FILENAME="$TODAY.txt"
+    vim $FILENAME
+}
+
+function note() {
+    if [[ -z $1 ]]
+    then
+        currentDate=`date +"%Y%m%d"`
+        currentFile="$NOTES_DIR/daily_notes/$currentDate.txt"
+        touch $currentFile
+        vim $currentFile    
+    else
+        fileName="$NOTES_DIR/daily_notes/$1.txt"
+        if [ -f "$fileName" ]; then
+            vim $fileName
+        else
+            echo "No such filename"
+        fi
+    fi
+}
+function notes() {
+    if [ -z $1 ]; then
+        note
+    else
+        note $1
+    fi
+}
+
+function web-browser() {
+    "/c/Program Files/Google/Chrome/Application/chrome.exe" "$1"
+}
+
+
+PATH="$PATH:/c/Program Files/nodejs"
+
+function github-runner() {
+    github "RunnerRecorder"
+}
+
+function github() {
+    if [ -z $1 ]; then
+        web-browser "github.com/ZackBotkin"
+    else
+        web-browser "github.com/ZackBotkin/$1"
+    fi
+}
+
+function kill-vmmem() {
+    wsl --shutdown
+}
+
+function show-configs() {
+    ls "$CONFIGS_DIR"
+}
+function open-configs() {
+    if [[ -z "$1" ]]; then
+        echo "Choose a config"
+    else
+        vim "$CONFIGS_DIR/$1.json"
+    fi
+}
+
+function show-databases() {
+    echo " "
+    echo ">>> PROD"
+    echo " "
+    ls "$HOME/Databases/prod"
+    echo " "
+    echo ">>> TEST"
+    echo " "
+    ls "$HOME/Databases/test"
+    echo " "
+}
